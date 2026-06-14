@@ -64,3 +64,4 @@ C:\Users\lucas.DESKTOP-ZILL\Teste_Tecnico_DataOn\Exe_02_Consulta_de_CEP\obj\Debu
 C:\Users\lucas.DESKTOP-ZILL\Teste_Tecnico_DataOn\Exe_02_Consulta_de_CEP\obj\Debug\net10.0\Exe_02_Consulta_de_CEP.pdb
 C:\Users\lucas.DESKTOP-ZILL\Teste_Tecnico_DataOn\Exe_02_Consulta_de_CEP\obj\Debug\net10.0\Exe_02_Consulta_de_CEP.genruntimeconfig.cache
 C:\Users\lucas.DESKTOP-ZILL\Teste_Tecnico_DataOn\Exe_02_Consulta_de_CEP\obj\Debug\net10.0\ref\Exe_02_Consulta_de_CEP.dll
+C:\Users\lucas.DESKTOP-ZILL\Teste_Tecnico_DataOn\Exe_02_Consulta_de_CEP\obj\Debug\net10.0\Exe_02_Consulta_de_CEP.sourcelink.json

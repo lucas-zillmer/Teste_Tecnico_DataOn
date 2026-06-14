@@ -64,3 +64,4 @@ C:\Users\lucas.DESKTOP-ZILL\Teste_Tecnico_DataOn\Exe_01_CRUD_de_Tarefas\obj\Debu
 C:\Users\lucas.DESKTOP-ZILL\Teste_Tecnico_DataOn\Exe_01_CRUD_de_Tarefas\obj\Debug\net10.0\Exe_01_CRUD_de_Tarefas.pdb
 C:\Users\lucas.DESKTOP-ZILL\Teste_Tecnico_DataOn\Exe_01_CRUD_de_Tarefas\obj\Debug\net10.0\Exe_01_CRUD_de_Tarefas.genruntimeconfig.cache
 C:\Users\lucas.DESKTOP-ZILL\Teste_Tecnico_DataOn\Exe_01_CRUD_de_Tarefas\obj\Debug\net10.0\ref\Exe_01_CRUD_de_Tarefas.dll
+C:\Users\lucas.DESKTOP-ZILL\Teste_Tecnico_DataOn\Exe_01_CRUD_de_Tarefas\obj\Debug\net10.0\Exe_01_CRUD_de_Tarefas.sourcelink.json

@@ -29,6 +29,9 @@ builder.Services.AddHttpClient("ViaCep", client =>
 // Registra o serviço de endereço como singleton
 builder.Services.AddSingleton<IServicoEndereco, ServicoEndereco>();
 
+// Adiciona suporte a controllers
+builder.Services.AddControllers();
+
 // Adiciona logging para rastreamento de operações
 builder.Services.AddLogging();
 
@@ -52,54 +55,11 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API de Consulta de CEP v1"));
 
-// ================== DEFINIÇÃO DOS ENDPOINTS ==================
+// Habilita a autorização
+app.UseAuthorization();
 
-/// <summary>
-/// GET /api/endereco/{cep} - Consulta um endereço pelo CEP
-/// </summary>
-app.MapGet("/api/endereco/{cep}", async (string cep, IServicoEndereco servicoEndereco) =>
-{
-    try
-    {
-        // Chama o serviço para consultar o endereço
-        var endereco = await servicoEndereco.ConsultarPorCepAsync(cep);
-
-        // Verifica se o endereço foi encontrado
-        if (endereco is null)
-        {
-            return Results.NotFound(new
-            {
-                erro = true,
-                mensagem = "CEP não encontrado.",
-                cep = cep
-            });
-        }
-
-        // Retorna o endereço encontrado
-        return Results.Ok(endereco);
-    }
-    catch (ArgumentException ex)
-    {
-        // Erro de validação de formato do CEP
-        return Results.BadRequest(new
-        {
-            erro = true,
-            mensagem = ex.Message
-        });
-    }
-    catch (HttpRequestException)
-    {
-        // Erro de comunicação com o serviço externo
-        return Results.StatusCode(StatusCodes.Status503ServiceUnavailable);
-    }
-    catch
-    {
-        // Erro genérico
-        return Results.StatusCode(StatusCodes.Status500InternalServerError);
-    }
-})
-   .WithName("ConsultarEndereçoPorCep")
-   .WithDescription("Consulta um endereço brasileiro pelo CEP (8 dígitos numéricos)");
+// Mapeia os controllers
+app.MapControllers();
 
 // ================== EXECUÇÃO ==================
 
